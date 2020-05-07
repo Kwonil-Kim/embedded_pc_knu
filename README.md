@@ -1,6 +1,10 @@
 # embedded_pc_knu
 산업용PC 설치 매뉴얼 (경북대)
 
+
+> 블로그형 간단한 설명 : https://www.embeddedarm.com/blog/practical-guide-to-getting-started-with-the-ts-7250-v2/ 
+> 정식 매뉴얼 : https://docs.embeddedarm.com/TS-7250-V2
+
 ## Booting
 
 ### eMMC 부팅
