@@ -96,3 +96,38 @@ vi .bash_profile # alias 풀기
 
 ![KakaoTalk_20200506_135616723_06](https://user-images.githubusercontent.com/56524306/81162062-8c1a0200-8fc7-11ea-9ddd-ed823c1510ef.png)
 ![KakaoTalk_20200506_135616723_07](https://user-images.githubusercontent.com/56524306/81162064-8c1a0200-8fc7-11ea-886c-51ccc424f50a.png)
+
+
+## PARSIVEL
+파시벨 USB-USB로 연결해서(뚜껑 열고) OTT에서 제공하는 usb드라이버 설치 후 ASDO에서 작동하는지 확인
+
+
+ASDO에서 Configuration - Execute - Read (COM포트 확인, Baud 19200)
+
+
+파라미터들 설정
+
+
+- Sensor ID PAR03, Telegram 변수들 순서와 delimeter 설정
+- 마지막 ,/r/n 있어야, RS485 bus off, SDI12 bus off, Heating mode On, Poll mode 마음대로, Interval time 마음대로
+
+
+> Station ID, Sensor status, Temperature~, Number of detected~, Intensity, Radar reflectivity, MOR Visibility, SYNOP WaWa, SYNOP WW, Rawdata, CR linefeed
+
+
+노란색선 TRX+, 초록색선 TRX-에 연결해서 RS232/485 컨버터 PC에 연결
+> ttyS0 떠야함
+
+```
+minicom -s
+```
+> /dev/ttyS0 19200 8N1 Flow No&No
+```
+CS/L # print configuration
+CS/P # poll one line
+CS/I/10 # stop poll and repeat 10 sec measurement
+```
+screen
+```
+python paracq.py # python2버전도 됨
+```
