@@ -12,7 +12,7 @@
 하드웨어 점퍼3을 on에서 off로(microsd로 부팅 X)
 ![20200506_131717](https://user-images.githubusercontent.com/56524306/81640467-915cce00-9459-11ea-9ff0-badb90a6d069.jpg)
 
-시리얼케이블로 연결
+'Null' 모뎀 케이블로 연결
 ![20200506_131725](https://user-images.githubusercontent.com/56524306/81640472-93269180-9459-11ea-82fa-98ca3df8a458.jpg)
 
 #### 리눅스
